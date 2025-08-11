@@ -1,3 +1,3 @@
 # swiggy-clone
 
-swiggy-website-clone-001.netlify.app
+(swiggy-website-clone-001.netlify.app)
