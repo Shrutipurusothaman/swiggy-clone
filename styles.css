@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.global-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap:25px;
+}
+
+.logo svg {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.location-text {
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 0px; 
+  border-bottom: 2px solid black;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+.location-text:hover{
+    color:orangered;
+    border-bottom:2px solid orangered;
+}
+.items{
+  font-family:"poppins",Arial, Helvetica;
+  font-weight:500;
+}
+.navbar-right .items{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  justify-content: space-between;
+}
+.items li{
+  display:flex;
+  align-items: center;
+  gap:6px;
+}
+.list1:hover{
+  color:orangered;
+}
+.list2:hover{
+  color:orangered;
+}
+.list3:hover{
+  color:orangered;
+}
+.list4:hover{
+  color:orangered;
+}
+.list5:hover{
+  color:orangered;
+}
+.list6:hover{
+  color:orangered;
+}
+.navbar-right .Down-arrow{
+  margin-left: 4px;
+}
+.heading h3{
+  margin-top: 30px;
+  margin-left: 200px;
+  font-size: 20px;
+  font-family: poppins ,sans-serif;
+}
+.top-items{
+ padding: 20px;
+ margin-left: 150px;
+}
+
+
+
+
