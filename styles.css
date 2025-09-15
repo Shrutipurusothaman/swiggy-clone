@@ -59,7 +59,7 @@ header {
   gap:40px;
   flex-wrap:wrap;
 }
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
 .navbar {
     flex-wrap: wrap;
     gap: 10px;
@@ -72,7 +72,7 @@ header {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 .navbar-right {
     display: none;
   }
@@ -110,17 +110,15 @@ header {
   padding: 10px;
   padding-left: 4%;
   margin:0 80px;
-  flex-wrap: wrap; 
   justify-content:flex-start;   
 }
 .top-items img {
-  height: 150px;        
-  width: auto;         
+  height:180px;       
 }
 .top-items:hover{
   cursor: pointer;
 }
-@media (max-width: 768px) {
+@media screen and  (max-width: 576px) {
 .heading {
     margin: 20px;
     flex-direction: column;
@@ -134,10 +132,11 @@ header {
 
 .top-items img {
     height: 140px;
+    overflow: hidden;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
 .heading h3 {
     font-size: 18px;
   }
@@ -225,18 +224,25 @@ header {
   color: #555;
   margin: 0;
 }
-.container1 h3{
-  margin-left: 160px;
-  font-size:20px;  
+@media screen and (max-width:576px){
+  .main-container h3{
+    margin-left: 20px;
+  }
+  .container-flex{
+    flex-direction: row;
+    margin-left:40px;
+    overflow:scroll;
+  }
 }
-.option-bar{
-  max-width: 1200px;
-  padding:20px 160px;
+.container1 h3{
+  margin : 0% 0% 0% 10%;
+  font-size:20px;  
 }
 .bar-items{
   display:flex;
   list-style-type: none;
   gap:20px;
+  padding:2% 0% 0% 12%;
 }
 .btn{
   border:2px solid gray;
@@ -245,15 +251,8 @@ header {
   font-family:arial;
   font-size:14px;
 }
-.image{
-  position:relative;  
-  height: 160px;
-  overflow: hidden;
-  max-width: 1200px;;
-}
 .container-flex{
   display: flex;
-  flex-wrap: wrap;
   gap:40px;
   justify-content:flex-start;
 }
@@ -266,6 +265,23 @@ header {
   filter:grayscale(100%);
   opacity:10;
 }
+@media screen and (max-width:576px){
+   .container1 h3{
+    white-space:nowrap;
+    margin:0% 0% 0% 4%;
+   }
+   .btn{
+    padding:0px 14px 0px 14px;
+   }
+   .container-grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left:6%;
+   }
+
+}
+
+/* adil hotel*/
 .adilhotel {
   width: 800px;              
   min-height: 20px;
@@ -375,6 +391,8 @@ header {
   gap: 10px;        
   font-size: 14px;
 }
+
+/*swiggy best places to eat section*/
 .placeheading{
   margin-top:4%;
   margin-left:10%;
@@ -398,6 +416,19 @@ header {
   border-radius:14px;
   padding:24px;
   text-align: center;  
+}
+@media screen and (max-width:576px)
+{
+  .placeheading{
+    margin-left:6%;
+  }
+  
+  .placestoeat{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left:10px;
+    gap:40px;
+  }
 }
 .bottom-line1{
   width:54%;
@@ -477,6 +508,7 @@ header {
   cursor: pointer;
 }
 
+/*swiggy footer*/
 .swiggyfooter {
   background-color: #f6f6f6;
   padding: 40px 20px;
