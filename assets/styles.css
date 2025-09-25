@@ -59,32 +59,6 @@ header {
   gap:40px;
   flex-wrap:wrap;
 }
-@media screen and (max-width: 992px) {
-.navbar {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-.navbar-left {
-    flex: 1;
-  }
-.navbar-right .items {
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 600px) {
-.navbar-right {
-    display: none;
-  }
-.navbar-left {
-    width: 100%;
-    justify-content: flex-start;
-  }
-.location-text,
-  .Down-arrow {
-    font-size: 16px;
-  }
-}
 .list1:hover,.list2:hover,.list3:hover,.list4:hover,.list5:hover,.list6:hover{
   color:orangered;
   cursor: pointer;
@@ -96,8 +70,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 25px 150px 10px;
+  margin:2% 0% 0% 10%;
   font-family: poppins, sans-serif;
+  padding:10px;
 }
 .heading h3{
   margin:0;
@@ -106,44 +81,19 @@ header {
 }
 .top-items {
   display: flex;
-  gap: 8px;           
-  padding: 10px;
-  padding-left: 4%;
-  margin:0 80px;
-  justify-content:flex-start;   
+  gap: 8px;
+  padding: 10px 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+  justify-content: flex-start;
 }
 .top-items img {
-  height:180px;       
+  width: 100%; 
+  max-width: 120px; 
+  height: auto; 
 }
 .top-items:hover{
   cursor: pointer;
-}
-@media screen and  (max-width: 576px) {
-.heading {
-    margin: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-.top-items {
-    margin: 0 20px;
-    justify-content: center;
-  }
-
-.top-items img {
-    height: 140px;
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 480px) {
-.heading h3 {
-    font-size: 18px;
-  }
-
-.top-items img {
-    height: 110px;
-  }
 }
 .bottom-line{
   width: 80%;
@@ -152,15 +102,22 @@ header {
   margin: 25px auto;
 }
 .main-container h3{
-  margin-top:40px;
-  margin-left: 150px;
+  margin:0% 0% 0% 10%;
   font-size: 20px;
   font-family: poppins ,sans-serif;
 }
 .container, .container2 {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
+  width:100%;
+}
+.container-flex {
+  display: flex;
+  gap: 26px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;           
+  box-sizing: border-box;
 }
 .restaurant-card {
   display:block;
@@ -224,61 +181,162 @@ header {
   color: #555;
   margin: 0;
 }
-@media screen and (max-width:576px){
-  .main-container h3{
-    margin-left: 20px;
-  }
-  .container-flex{
-    flex-direction: row;
-    margin-left:40px;
-    overflow:scroll;
-  }
-}
+
+/*Restaurants with online delivery in chindwara*/
 .container1 h3{
-  margin : 0% 0% 0% 10%;
-  font-size:20px;  
+  margin-left:10%;
+  font-size:20px;
+  font-family: poppins,sans-serif;
 }
-.bar-items{
-  display:flex;
-  list-style-type: none;
-  gap:20px;
-  padding:2% 0% 0% 12%;
-}
-.btn{
-  border:2px solid gray;
-  border-radius: 20px;
-  padding:10px;
-  font-family:arial;
-  font-size:14px;
-}
-.container-flex{
+.bar-items {
   display: flex;
-  gap:40px;
-  justify-content:flex-start;
+  gap: 15px;
+  list-style: none;
+  padding:2% 0% 0% 10%;
 }
-.container-grid{
-  display:grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 10px;
+.bar-items .btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.bar-items .btn:hover {
+  background: #f0f0f0;
+} 
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;         
 }
 .blurimage{
   filter:grayscale(100%);
-  opacity:10;
-}
-@media screen and (max-width:576px){
-   .container1 h3{
-    white-space:nowrap;
-    margin:0% 0% 0% 4%;
-   }
-   .btn{
-    padding:0px 14px 0px 14px;
-   }
-   .container-grid{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    margin-left:6%;
-   }
+} 
 
+/*swiggy best places to eat section*/
+.placeheading{
+  margin-top:4%;
+  margin-left:10%;
+  font-family: poppins,sans-serif;
+  font-size:20px;
+  font-weight:10px;
+}
+.placestoeat{
+  display:inline-grid;
+  grid-template-columns: repeat(4,auto);
+  column-gap:10px;
+  margin-left:10%;
+  padding-top: 20px;
+  gap:40px;
+}
+.placestoeat a{
+  color:black;
+  text-decoration: none;
+  font-weight:bold;
+  border:1px solid rgb(212, 204, 204);
+  border-radius:14px;
+  padding:24px;
+  text-align: center;  
+}
+
+
+/*swiggy footer*/
+.swiggyfooter {
+  background-color: #f6f6f6;
+  padding: 40px 20px;
+  font-family: poppins, sans-serif;
+}
+.Swiggyapp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+.storelinks {
+  display: flex;
+  gap: 16px;
+}
+.playstore, .appstore {
+  width: 180px;
+  height: auto;
+}
+.footerbottomsection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.swiggy-brand {
+  display: flex;   
+  flex-direction:column;
+  gap: 6px;                 
+}
+.swiggyname{
+  display:inline;
+}
+.logo-name{
+  display: flex;
+  flex-direction: row;      
+  align-items: center;      
+  gap: 8px;     
+}
+.swiggy-brand p {
+  margin:0;          
+  color: #7e7a7a;
+  font-size: 14px;
+}
+.swiggy-logo {
+  width: 48px;
+  height: 46px;    
+}
+.swiggyname {
+  color: orangered;
+  font-weight: 800;
+  font-size: 26px;
+}
+.footer-links {
+  flex: 3 1 700px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 40px;
+}
+.legalpage, .socialpage {
+  grid-column: span 2; 
+}
+.footerheading {
+  font-weight: bold;
+  margin-bottom: 10px;
+  list-style-type:none;
+}
+.footerbody {
+  color: #7e7a7a;
+  margin-bottom: 6px;
+  list-style-type:none;
+}
+.cities{
+  list-style-type:none;
+  color: #7e7a7a;
+  border:1px solid gray;
+  border-radius:12px;
+  padding:2px 6px;
+  width:fit-content;
+}
+.socialpage ul {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+.socialpage img{
+  cursor:pointer;
+  width:20px;
+  height:20px;
 }
 
 /* adil hotel*/
@@ -391,45 +449,6 @@ header {
   gap: 10px;        
   font-size: 14px;
 }
-
-/*swiggy best places to eat section*/
-.placeheading{
-  margin-top:4%;
-  margin-left:10%;
-  font-family: poppins,sans-serif;
-  font-size:20px;
-  font-weight:10px;
-}
-.placestoeat{
-  display:inline-grid;
-  grid-template-columns: repeat(4,auto);
-  column-gap:10px;
-  margin-left:10%;
-  padding-top: 20px;
-  gap:40px;
-}
-.placestoeat a{
-  color:black;
-  text-decoration: none;
-  font-weight:bold;
-  border:1px solid rgb(212, 204, 204);
-  border-radius:14px;
-  padding:24px;
-  text-align: center;  
-}
-@media screen and (max-width:576px)
-{
-  .placeheading{
-    margin-left:6%;
-  }
-  
-  .placestoeat{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    margin-left:10px;
-    gap:40px;
-  }
-}
 .bottom-line1{
   width:54%;
   border-bottom: 1px solid lightgray;
@@ -508,103 +527,122 @@ header {
   cursor: pointer;
 }
 
-/*swiggy footer*/
-.swiggyfooter {
-  background-color: #f6f6f6;
-  padding: 40px 20px;
-  font-family: poppins, sans-serif;
-}
-.Swiggyapp {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto 40px;
-}
-.storelinks {
-  display: flex;
-  gap: 16px;
-}
-.playstore, .appstore {
-  width: 180px;
-  height: auto;
-}
-.footerbottomsection {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-.swiggy-brand {
-  display: flex;   
-  flex-direction:column;
-  gap: 6px;                 
-}
-.swiggyname{
-  display:inline;
-}
-.logo-name{
-  display: flex;
-  flex-direction: row;      
-  align-items: center;      
-  gap: 8px;     
-}
-.swiggy-brand p {
-  margin:0;          
-  color: #7e7a7a;
-  font-size: 14px;
-}
-.swiggy-logo {
-  width: 48px;
-  height: 46px;    
-}
-.swiggyname {
-  color: orangered;
-  font-weight: 800;
-  font-size: 26px;
-}
-.footer-links {
-  flex: 3 1 700px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: auto;
-  gap: 40px;
-}
-.legalpage, .socialpage {
-  grid-column: span 2; 
-}
-.footerheading {
-  font-weight: bold;
-  margin-bottom: 10px;
-  list-style-type:none;
-}
-.footerbody {
-  color: #7e7a7a;
-  margin-bottom: 6px;
-  list-style-type:none;
-}
-.cities{
-  list-style-type:none;
-  color: #7e7a7a;
-  border:1px solid gray;
-  border-radius:12px;
-  padding:2px 6px;
-  width:fit-content;
-}
-.socialpage ul {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  padding: 0;
-  list-style: none;
-}
-.socialpage img{
-  cursor:pointer;
-  width:20px;
-  height:20px;
-}
 
+/*Media queries for mobile devices*/
+
+@media screen and (min-width: 480px ) and  (max-width: 576px) 
+{
+  /* Header section */
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar-left {
+    gap: 10px;
+  }
+
+  .navbar-right .items li { 
+    display: none;
+  }
+
+  .navbar-right .items .list5 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .navbar-right .items {
+    gap: 0;
+  }
+ 
+  /* What's on your mind*/
+  .top-items{
+    display: flex;    
+    flex-wrap: wrap;        
+    gap: 8px;                  
+    padding: 10px;            
+    padding-left: 4%;          
+    margin:0 40px;             
+    justify-content:flex-start;
+  }
+  .top-items img {
+    width: 100%;     
+    max-width: 120px;
+    width: calc(20% - 10px);
+    height: auto;     
+ }
+ .top-items:hover{
+  cursor: pointer;
+ }
+
+ /* Top Restaurant chains in chindwara*/
+ .container{
+  transform:scale(0.9);
+ }
+ .container-flex{
+   display:flex;
+   overflow:scroll;
+   margin:0px 0px 0px 26px;
+ }
+ .restaurant-card{
+  width:calc(20%-10px);
+ }
+
+ /*Restaurants with online food delivery in chindwara*/
+   .container1 h3{
+    font-size:18px;
+    margin:0% 0% 0% 4%;
+   }
+   .bar-items{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-right: 10%;
+   }
+  .bar-items .btn{
+     padding: 6px 10px;
+    font-size: 12px;
+  }
+  .container-grid{
+    grid-template-columns: repeat(2, 1fr);
+    margin:0 0px;
+  }
+  .restaurant-card{
+    width:calc(50%-10px);
+  }
+  /*swiggy best places to eat section*/
+  .placestoeat{
+    grid-template-columns: repeat(2,auto);
+    gap:20px;
+    margin:0% 0% 0% 4%;
+  }
+  .placeheading{
+    font-size:18px;
+    margin:4% 0% 0% 4%;
+  }
+  /*swiggy footer*/
+  .Swiggyapp{
+   gap:40px;
+  }
+  .storelinks{
+    justify-content: center;
+  }
+  .Footer-links{
+    display:grid;
+  }
+  .swiggycompany, .contactpage, .availablepage, .socialpage{
+    grid-column: span 2;
+  }
+  .socialpage{
+    justify-content:center;
+  }
+  .bottom-line{
+    width:90%;
+    border-bottom: 1px solid lightgray;
+    margin: 40px auto;
+  }
+ 
+
+
+
+}
