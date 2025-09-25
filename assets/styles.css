@@ -530,7 +530,7 @@ header {
 
 /*Media queries for mobile devices*/
 
-@media screen and (min-width: 480px ) and  (max-width: 576px) 
+@media screen and (max-width: 576px) 
 {
   /* Header section */
   .navbar {
