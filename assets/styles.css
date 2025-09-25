@@ -465,6 +465,7 @@ header {
   align-items:flex-start;
   padding:10px 24%;
   gap:20px;
+  border-bottom:1px solid #ddd;
 }
 .menudetails {
   display: flex;

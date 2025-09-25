@@ -1,0 +1,65 @@
+{
+  "Restaurant": "Adil Hotel", 
+  "items":[
+      
+     {
+        "id":0,
+        "name":"Chicken Roast",
+        "price":259,
+        "rating":3.5,
+        "peoplerating":91,
+        "description":"A couple of simple ingredients with no-fuss prep make a roast chicken that many swear is the juiciest they've ever eaten.",
+        "image":"../images/adil chicken roast.avif"
+     },
+     {
+        "id":1,
+        "name":"Mutton Roast",
+        "price":250,   
+        "rating":3.1,
+        "peoplerating":50,
+        "description":" Carefully, add the onion slices, salt and mutton slices to the pan. Deep fry the onion and mutton slices till they get golden brown in colour",
+        "image" : "../images/adil mutton roast.avif"
+    },
+
+    {
+        "id":2,
+        "name":"Egg Bhurji",
+        "price":113,   
+        "rating":4.1,
+        "peoplerating":91,
+        "description":"A delightful North Indian starter featuring fluffy scrambled eggs cooked to perfection.",
+        "image" : "../images/adil egg burji.avif"
+    },
+
+    {
+        "id":3,
+        "name":"Jeera Rice",
+        "price":112,   
+        "rating":4.5,
+        "peoplerating":50,
+        "description":"A fragrant and flavorful rice dish that is sure to delight your taste buds.",
+        "image" : "../images/jeerarice.avif"
+    },
+
+    {
+        "id":4,
+        "name":"Butter Paneer",
+        "price":224,   
+        "rating":4.5,
+        "peoplerating":100,
+        "description":" Paneer butter masala, also known as butter paneer is a rich & creamy curry made with paneer, spices, onions, tomatoes, cashews and butter.",
+        "image" : "../images/butter panneer.avif"
+    },
+
+    {
+        "id":5,
+        "name":"Panner Masala",
+        "price":250,   
+        "rating":4.5,
+        "peoplerating":100,
+        "description":"A rich and flavorful North Indian main course featuring succulent pieces of paneer in a tantalizing gravy.",
+        "image" : "../images/panneer butter masala.avif"
+    }
+  ]
+
+}
