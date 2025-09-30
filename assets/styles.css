@@ -59,6 +59,14 @@ header {
   gap:40px;
   flex-wrap:wrap;
 }
+.list6{
+  position:relative;
+}
+
+
+
+
+
 .list1:hover,.list2:hover,.list3:hover,.list4:hover,.list5:hover,.list6:hover{
   color:orangered;
   cursor: pointer;
@@ -68,11 +76,26 @@ header {
 }
 .heading{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin:2% 0% 0% 10%;
   font-family: poppins, sans-serif;
   padding:10px;
+}
+.buttons{
+  display: flex;
+  padding-left:66%;
+  gap:10px;
+}
+#prev-button{
+  border: 14px solid #aaa;
+  background-color: #aaa;
+  border-radius: 22px;
+  cursor: pointer;
+}
+#next-button{
+  border: 14px solid #aaa;
+  background-color: #aaa;
+  border-radius: 22px; 
+  cursor: pointer;
 }
 .heading h3{
   margin:0;
@@ -81,16 +104,18 @@ header {
 }
 .top-items {
   display: flex;
+  justify-content: flex-start;
   gap: 8px;
   padding: 10px 16px;
   margin: 0 auto;
   max-width: 1200px;
-  justify-content: flex-start;
+  overflow: hidden;
+
 }
 .top-items img {
   width: 100%; 
   max-width: 120px; 
-  height: auto; 
+  height: auto;  
 }
 .top-items:hover{
   cursor: pointer;
@@ -465,7 +490,6 @@ header {
   align-items:flex-start;
   padding:10px 24%;
   gap:20px;
-  border-bottom:1px solid #ddd;
 }
 .menudetails {
   display: flex;

@@ -26,7 +26,9 @@ fetch('menu.json')
                 <img src="${dish.image}" alt="${dish.name}">
                 <button class="Addbtn" onclick="addtocart()">ADD</button>
             </div>`
-            
+        const line = document.createElement("div");
+        line.classList.add("bottom-line1");
+        menuContainer.appendChild(line);
         menuContainer.appendChild(card);
     });
 });

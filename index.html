@@ -44,6 +44,7 @@
                         <span>Sign In</span>
                        </li>
                        <li class="list6">
+                        <div id="cart-num">0</div>
                         <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
                         <span>Cart</span>
                        </li>
@@ -55,8 +56,14 @@
 <main>
  <div class="heading">
     <h3>What's on your mind?</h3>
-    <button id="prev-button"></button>
-    <button id="next-button"></button>
+     <div class="buttons">
+       <button id="prev-button" onclick="prev()">
+          <i class="fa-sharp fa-solid fa-arrow-left" style="color: #000000;"></i>
+       </button>
+       <button id="next-button" onclick="next()">
+          <i class="fa-sharp fa-solid fa-arrow-right" style="color: #000000;"></i>
+       </button>
+     </div>
  </div>
   <div class="top-items">
       <img src="./images/biryani.avif" alt="restaurants with biriyani">
@@ -66,6 +73,9 @@
       <img src="./images/Tea.avif" alt="restaurants with Tea">
       <img src="./images/chinese.avif"alt="restaurants with chinese">
       <img src="./images/coffee.avif"alt="restaurants with coffee">
+      <img src="./images/icecream.avif"alt="restaurants with icecream">
+      <img src="./images/chole bhature.avif"alt="restaurants with chole bhature">
+      <img src="./images/Noodles.avif"alt="restaurants with Noodles">
       <img src="./images/icecream.avif"alt="restaurants with icecream">
       <img src="./images/chole bhature.avif"alt="restaurants with chole bhature">
       <img src="./images/Noodles.avif"alt="restaurants with Noodles">
@@ -582,7 +592,16 @@
   </div>
 </footer>
 <script>
-   
+  const container = document.querySelector('.top-items');
+  const scrollAmount = 128;
+
+  function next() {
+    container.scrollLeft += scrollAmount;
+  }
+
+  function prev() {
+    container.scrollLeft -= scrollAmount;
+  }
 </script>
 </body>
 </html>
