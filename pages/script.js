@@ -24,7 +24,14 @@ fetch('menu.json')
             </div>
             <div class="dishimage">
                 <img src="${dish.image}" alt="${dish.name}">
-                <button class="Addbtn" onclick="addtocart()">ADD</button>
+                <div class="add-section">
+                    <button class="Addbtn" onclick="addtocart()">ADD</button>
+                    <div class="qty-box">
+                       <button onclick="decreaseqty">-</button>
+                       <span id="qty-1">1</span>
+                       <button onclick="increaseqty">+</button>
+                    </div>
+                </div>
             </div>`
         const line = document.createElement("div");
         line.classList.add("bottom-line1");

@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
+<body class="cart">
+    <header class="cartheader">
         <div class="global-nav">
              <div class="navbar">
                <div class="navbar-left">
@@ -43,54 +43,57 @@
                         <a href="#"><svg class="ppAwf" viewBox="6 0 12 24" height="19" width="18" fill="#000000"><path d="M11.9923172,11.2463768 C8.81761115,11.2463768 6.24400341,8.72878961 6.24400341,5.62318841 C6.24400341,2.5175872 8.81761115,0 11.9923172,0 C15.1670232,0 17.740631,2.5175872 17.740631,5.62318841 C17.740631,8.72878961 15.1670232,11.2463768 11.9923172,11.2463768 Z M11.9923172,9.27536232 C14.0542397,9.27536232 15.7257581,7.64022836 15.7257581,5.62318841 C15.7257581,3.60614845 14.0542397,1.97101449 11.9923172,1.97101449 C9.93039471,1.97101449 8.25887628,3.60614845 8.25887628,5.62318841 C8.25887628,7.64022836 9.93039471,9.27536232 11.9923172,9.27536232 Z M24,24 L0,24 L1.21786143,19.7101449 L2.38352552,15.6939891 C2.85911209,14.0398226 4.59284263,12.7536232 6.3530098,12.7536232 L17.6316246,12.7536232 C19.3874139,12.7536232 21.1256928,14.0404157 21.6011089,15.6939891 L22.9903494,20.5259906 C23.0204168,20.63057 23.0450458,20.7352884 23.0641579,20.8398867 L24,24 Z M21.1127477,21.3339312 L21.0851024,21.2122487 C21.0772161,21.1630075 21.0658093,21.1120821 21.0507301,21.0596341 L19.6614896,16.2276325 C19.4305871,15.4245164 18.4851476,14.7246377 17.6316246,14.7246377 L6.3530098,14.7246377 C5.4959645,14.7246377 4.55444948,15.4231177 4.32314478,16.2276325 L2.75521062,21.6811594 L2.65068631,22.0289855 L21.3185825,22.0289855 L21.1127477,21.3339312 Z"></path></svg></a>
                         <span>Sign In</span>
                        </li>
-                       <li class="list6">
-                          <div id="cart-num">0</div>
-                          <div class="carticon">
-                            <a href="cartpage.html"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
-                            <a href="cartpage.html" class="cartpage">Cart</a>
-                       </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </header>
-    <main>
-        <div class="adilheading">
-            <h3>Adil Hotel</h3>
-        </div>
-        <div class="adilhotel">
-            <div class="card-details">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)"><circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle><path d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z" fill="white"></path><defs><linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#21973B"></stop><stop offset="1" stop-color="#128540"></stop></linearGradient></defs></svg>
-                <div class="row-details">
-                    <span><b>4.4 (1.3K+ ratings)</b></span>
-                    <span class="amt"><b>• ₹150 for two</b></span>
-                </div> 
-            </div>
-            <p class="famous-item"><b>Biriyani,Tandoori</b></p>
-            <div class="place-time">
-                <div class="row">
-                    <span class><b>Outlet</b></span>
-                    <span class="city"><b>Chindwara Locality</b></span>
+   </header>
+  <main class="cart-main">
+        <div class="cart-left">
+            <div class="cart-row">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-user"></i>
                 </div>
-                <p class="time"><b>45-50 mins</b></p>
+                <div class="cart-box">
+                    <div class="box-left">
+                        <h2 class="acc-title">Account</h2>
+                        <p class="acc-desc">To place your order now, log in to your existing account or sign up.</p>
+                        <div class="btns">
+                            <button class="outline-btn">Have an account?<br> LOG IN</button>
+                            <button class="filled-btn">New to Swiggy?<br> SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-row">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="cart-box1">
+                    <h2 class="delheading">Delivery address</h2>
+                </div>
+            </div>
+            <div class="cart-row">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <div class="cart-box1">
+                    <h2 class="payheading">Payment</h2>
+                </div>
             </div>
         </div>
-        <div class="menu-searchbar">
-           <p class="menu"><b>M E N U</b></p>
-           <span class="searchbar">
-              <b>Search For Dishes</b>
-              <i class="fa-solid fa-magnifying-glass fa-xs" style="color: #887c7c;"></i>
-           </span>
-        </div>
-        <div class="bottom-line1"></div>
-        <div class="MenuStart">
-            <h3>Main menu(6)</h3>
-        </div>
-        <div class="menu-container">
-            <!--render menu here-->
-        </div>
+        <div class="cart-right">
+            <div class="cart-items">
+                <div class="hotelandimg">
+                    <div class="hotelimg">
+                        <img src="../images/adilhotel.avif" alt="Adil hotel Image">
+                    </div>
+                    <div class="hotelname">Adil Hotel</div>
+                    <p>Chhindwara Locality</p>
+                </div>
+            </div>
+      </div>
+  </main>
 
-   </main>
-    <script src="script.js"></script>
 </body>
 </html>

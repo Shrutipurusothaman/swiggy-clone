@@ -44,16 +44,19 @@
                         <span>Sign In</span>
                        </li>
                        <li class="list6">
-                        <div id="cart-num">0</div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
-                        <span>Cart</span>
+                          <div id="cart-num">0</div>
+                          <div class="carticon">
+                            <a href="./pages/cartpage.html"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                            <a href="./pages/cartpage.html" class="cartpage">Cart</a>
+                         </div>
                        </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </header>
+      </header>
 <main>
+
  <div class="heading">
     <h3>What's on your mind?</h3>
      <div class="buttons">
@@ -594,13 +597,11 @@
 <script>
   const container = document.querySelector('.top-items');
   const scrollAmount = 128;
-
-  function next() {
-    container.scrollLeft += scrollAmount;
-  }
-
   function prev() {
     container.scrollLeft -= scrollAmount;
+  }
+  function next() {
+    container.scrollLeft += scrollAmount;
   }
 </script>
 </body>

@@ -15,7 +15,6 @@ header {
 .global-nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .navbar {
@@ -59,17 +58,34 @@ header {
   gap:40px;
   flex-wrap:wrap;
 }
-.list6{
-  position:relative;
+.list1,.list2,.list3,.list4,.list5,.list6{
+  list-style:none;
+  font-size:14px;
+  padding-bottom: 4px;
 }
-
-
-
-
-
-.list1:hover,.list2:hover,.list3:hover,.list4:hover,.list5:hover,.list6:hover{
+.list1:hover,.list2:hover,.list3:hover,.list4:hover,.list5:hover{
   color:orangered;
   cursor: pointer;
+}
+.carticon a {
+  color: inherit;
+  text-decoration: none;
+}
+.carticon:hover{
+  color:orangered;
+  cursor:pointer;
+}
+#cart-num{
+  padding-left:4px;
+  border:2px solid lightgray;
+  background-color: lightgray;
+  border-radius:12px;
+  height:auto;   
+  width:20px;
+  padding:0px 0px 0px 6px;
+}
+.carticon{
+  padding-bottom:20px;
 }
 .navbar-right .Down-arrow{
   margin-left: 10px;
@@ -539,7 +555,7 @@ header {
 }
 .Addbtn {
   position: absolute;
-  bottom:1px;
+  bottom: 1px;
   left: 50%;
   transform: translateX(-50%);
   background: #fff;
@@ -551,6 +567,265 @@ header {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/*Add button css can be added down
+
+
+
+
+
+.................................................................................
+
+
+
+
+
+
+
+*/
+
+/* Cartpage css */
+.cart{
+  background-color: #eaeaea;
+}
+.cart-header{
+  background-color: #fff;
+}
+
+.cart-main {
+  width: 80%;
+  margin: auto;
+}
+
+.cart-row {
+ display:flex;
+ align-items: flex-start;
+ gap:15px;
+ margin-top:20px;
+ margin-bottom:10px;
+ font-family: poppins,sans-serif;
+}
+
+.cart-icon {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.cart-icon i {
+  font-size: 20px;
+}
+
+.cart-box {
+  background: #fff;
+  padding:10px 6px 60px 10px;
+  width: 62%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-box1{
+  background: #fff;
+  padding:20px 6px 60px 26px;
+  width:60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.delheading,.payheading{
+   color:gray;
+   font-size:1.5rem
+}
+.acc-title{
+  margin-bottom:15px;
+  margin-top:2px;
+}
+.acc-desc{
+  margin-bottom:20px;
+}
+.box-left{
+  gap:10px;
+}
+.btns {
+  margin-top: 15px;
+}
+
+.outline-btn {
+  border: 1px solid #63E6BE;
+  padding: 12px 30px;
+  background: transparent;
+  margin-right: 10px;
+}
+
+.filled-btn {
+  background: #63E6BE;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+}
+.outline-btn:hover,.filled-btn:hover{
+  cursor: pointer;
+}
+/* Right side bill container */
+.cart-right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: Poppins, sans-serif;
+  height: fit-content;
+  position: sticky;   /* bill stays visible while scrolling */
+  top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Hotel section */
+.hotelimg img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.hotelandimg {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.hotelname {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.hotelandimg p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Cart items list */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 0.95rem;
+}
+
+.cart-item-name {
+  flex: 2;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-item-price {
+  flex: 1;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Quantity buttons */
+.qty-btn {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  background: #f1f1f1;
+}
+
+/* Suggestions / Note */
+.cart-note {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+/* Totals section */
+.bill-details {
+  border-top: 1px solid #ddd;
+  margin-top: 15px;
+  padding-top: 10px;
+  font-size: 0.95rem;
+}
+
+.bill-details p {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.bill-total {
+  border-top: 2px solid #000;
+  margin-top: 15px;
+  padding-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Media queries for mobile devices*/
@@ -581,14 +856,26 @@ header {
   }
  
   /* What's on your mind*/
+  .heading h3{
+    font-size:18px;
+    text-align:justify;
+  }
+  .buttons{
+    gap:5px;
+    margin:0;
+    padding:0;
+    padding-right:4%;
+    padding-left:32%;
+  }
   .top-items{
-    display: flex;    
-    flex-wrap: wrap;        
+    display: flex;            
     gap: 8px;                  
     padding: 10px;            
     padding-left: 4%;          
     margin:0 40px;             
     justify-content:flex-start;
+    overflow: hidden;
+    scroll-behavior: smooth;
   }
   .top-items img {
     width: 100%;     
@@ -621,11 +908,16 @@ header {
    .bar-items{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding-right: 10%;
+    justify-content:left;
+    overflow-x: auto;
+    padding:2% 0% 0% 4%;  
+    gap:10px;
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
    }
   .bar-items .btn{
-     padding: 6px 10px;
+    margin:auto;
+    padding:6px 12px;
     font-size: 12px;
   }
   .container-grid{
@@ -666,8 +958,31 @@ header {
     border-bottom: 1px solid lightgray;
     margin: 40px auto;
   }
- 
 
-
-
+  /*adil hotel*/
+  .adilheading{
+    text-align:left;
+    padding-left:10%;
+  }
+  .adilhotel{
+    width:72%;
+    padding:20px 10px;
+    border-radius:12px;
+    margin-left:10%;
+  }
+  .searchbar{
+    max-width:80%;
+  }
+  .dish-description{
+    display:none;
+  }
+  .peoplerating{
+    display:block;
+    font-size: 14px;
+    margin-left:0;
+  }
+  .bottom-line1{
+    width:80%;
+    
+  }
 }
