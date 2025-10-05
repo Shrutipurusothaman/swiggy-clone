@@ -574,7 +574,7 @@ header {
 
 
 
-.................................................................................
+  .................................................................................
 
 
 
@@ -584,248 +584,119 @@ header {
 
 */
 
-/* Cartpage css */
+/*cartpage css*/
+
 .cart{
+  background-color:#eaeaea;
+}
+.cartheader{
+  background-color:#fff;
+}
+.wholecart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: #eaeaea;
+  padding: 30px;
+  gap: 20px;
 }
-.cart-header{
+.left-cart {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin:auto;
+  font-family: poppins, sans-serif;
+}
+.right-cart {
+  width: 35%;
+  height:100%;
   background-color: #fff;
-}
-
-.cart-main {
-  width: 80%;
-  margin: auto;
-}
-
-.cart-row {
- display:flex;
- align-items: flex-start;
- gap:15px;
- margin-top:20px;
- margin-bottom:10px;
- font-family: poppins,sans-serif;
-}
-
-.cart-icon {
-  background: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 3px rgba(0,0,0,0.1);
-  position: relative;
-}
-
-.cart-icon i {
-  font-size: 20px;
-}
-
-.cart-box {
-  background: #fff;
-  padding:10px 6px 60px 10px;
-  width: 62%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.cart-box1{
-  background: #fff;
-  padding:20px 6px 60px 26px;
-  width:60%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.delheading,.payheading{
-   color:gray;
-   font-size:1.5rem
-}
-.acc-title{
-  margin-bottom:15px;
-  margin-top:2px;
-}
-.acc-desc{
-  margin-bottom:20px;
-}
-.box-left{
-  gap:10px;
-}
-.btns {
-  margin-top: 15px;
-}
-
-.outline-btn {
-  border: 1px solid #63E6BE;
-  padding: 12px 30px;
-  background: transparent;
-  margin-right: 10px;
-}
-
-.filled-btn {
-  background: #63E6BE;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-}
-.outline-btn:hover,.filled-btn:hover{
-  cursor: pointer;
-}
-/* Right side bill container */
-.cart-right {
-  flex: 1;
-  background: #fff;
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 8px;
-  font-family: Poppins, sans-serif;
-  height: fit-content;
-  position: sticky;   /* bill stays visible while scrolling */
-  top: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: poppins, sans-serif;
 }
 
-/* Hotel section */
-.hotelimg img {
-  width: 60px;
-  height: 60px;
+.cart-acc,
+.cart-deli,
+.cart-pay {
+  background-color: #fff;
+  padding: 25px;
   border-radius: 8px;
-  object-fit: cover;
-  margin-right: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-.hotelandimg {
+.Acc-title,
+.deli-title,
+.pay-title {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  gap: 15px;
 }
 
-.hotelname {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.hotelandimg p {
-  font-size: 0.9rem;
-  color: #666;
+.Acc-title h2,
+.deli-title h2,
+.pay-title h2 {
+  font-size: 20px;
   margin: 0;
 }
 
-/* Cart items list */
-.cart-item {
+.acc-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.acc-img i {
+  font-size: 22px;
+}
+.cartbutton {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 12px 0;
-  font-size: 0.95rem;
+  margin-top: 20px;
 }
-
-.cart-item-name {
-  flex: 2;
-}
-
-.cart-item-qty {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cart-item-price {
-  flex: 1;
-  text-align: right;
+.outline-btn,
+.filled-btn {
+  width: 20%;
+  padding: 15px;
+  text-align: center;
+  margin:auto;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
   font-weight: 500;
 }
-
-/* Quantity buttons */
-.qty-btn {
-  border: 1px solid #ccc;
-  padding: 4px 8px;
-  background: #fff;
-  cursor: pointer;
+.outline-btn {
+  border: 2px solid #63E6BE;
+  background-color: #fff;
+  color: #000;
+}
+.filled-btn {
+  background-color: #63E6BE;
+  border: 2px solid #63E6BE;
+  color: #000;
+}
+.cart-items {
+  width: 100%;
 }
 
-.qty-btn:hover {
-  background: #f1f1f1;
+.hotel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding-top:10px 0;
 }
 
-/* Suggestions / Note */
-.cart-note {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 15px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
+.hotel img {
+  width: 60px;
+  height: 60px;
   border-radius: 6px;
-  background: #fafafa;
+  object-fit: cover;
 }
 
-/* Totals section */
-.bill-details {
-  border-top: 1px solid #ddd;
-  margin-top: 15px;
-  padding-top: 10px;
-  font-size: 0.95rem;
+.hotelname {
+    font-size: 18px;
+    font-weight: 500;
 }
-
-.bill-details p {
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 0;
-}
-
-.bill-total {
-  border-top: 2px solid #000;
-  margin-top: 15px;
-  padding-top: 10px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*Media queries for mobile devices*/

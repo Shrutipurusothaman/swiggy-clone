@@ -48,52 +48,47 @@
             </div>
         </div>
    </header>
-  <main class="cart-main">
-        <div class="cart-left">
-            <div class="cart-row">
-                <div class="cart-icon">
-                    <i class="fa-solid fa-user"></i>
+   <main>
+     <div class="wholecart">
+            <div class="left-cart">
+                <!--Account details-->
+                <div class="cart-acc">
+                    <div class="Acc-title">
+                        <span class="acc-img"><i class="fa-sharp fa-solid fa-user" style="color: #000000;"></i></span>
+                        <h2>Account</h2>
+                        <span class="acc-desc">To place your order now, log in to your existing account or sign up.</span>
+                    </div>
+                    <div class="cartbutton">
+                        <div class="outline-btn">Have an account?<br>LOG IN</div>
+                        <div class="filled-btn">New to Swiggy?<br>SIGN UP</div>
+                    </div>
                 </div>
-                <div class="cart-box">
-                    <div class="box-left">
-                        <h2 class="acc-title">Account</h2>
-                        <p class="acc-desc">To place your order now, log in to your existing account or sign up.</p>
-                        <div class="btns">
-                            <button class="outline-btn">Have an account?<br> LOG IN</button>
-                            <button class="filled-btn">New to Swiggy?<br> SIGN UP</button>
-                        </div>
+                <!--Delivery details-->
+                <div class="cart-deli">
+                    <div class="deli-title">
+                        <span class="acc-img"><i class="fa-solid fa-location-dot" style="color: #000000;"></i></span>
+                        <h2>Delivery Address</h2>
+                    </div>
+                </div>
+                <!--Payment details-->
+                <div class="cart-pay">
+                    <div class="pay-title">
+                        <span class="acc-img"><i class="fa-solid fa-money-check" style="color: #000000;"></i></span>
+                        <h2>Payment</h2>
                     </div>
                 </div>
             </div>
-            <div class="cart-row">
-                <div class="cart-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div class="cart-box1">
-                    <h2 class="delheading">Delivery address</h2>
-                </div>
-            </div>
-            <div class="cart-row">
-                <div class="cart-icon">
-                    <i class="fa-solid fa-wallet"></i>
-                </div>
-                <div class="cart-box1">
-                    <h2 class="payheading">Payment</h2>
+            <div class="right-cart">
+                <div class="cart-items">
+                    <div class="hotel">
+                        <img src="../images/adilhotel.avif">
+                        <span class="hotelname">Adil Hotel</span>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div class="cart-right">
-            <div class="cart-items">
-                <div class="hotelandimg">
-                    <div class="hotelimg">
-                        <img src="../images/adilhotel.avif" alt="Adil hotel Image">
-                    </div>
-                    <div class="hotelname">Adil Hotel</div>
-                    <p>Chhindwara Locality</p>
-                </div>
-            </div>
-      </div>
-  </main>
-
+   </main>
+   <script src="./script.js"></script>
 </body>
 </html>
