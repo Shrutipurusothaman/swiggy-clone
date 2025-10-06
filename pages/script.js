@@ -1,9 +1,15 @@
+//add to cart 
+// create an empty array for storing cart items
+let cart=[];
+let menuItems=[];
 
 //fetch the menu from json file and select the menu container
 fetch('menu.json')
    .then(res=> res.json())
     .then(data=>{
         console.log(data);
+        menuItems=data.items;
+        console.log("Menu Items:", menuItems);
         const menuContainer = document.querySelector('.menu-container')
   //render the menu items
     data.items.forEach(dish => {
@@ -25,14 +31,16 @@ fetch('menu.json')
             <div class="dishimage">
                 <img src="${dish.image}" alt="${dish.name}">
                 <div class="add-section">
-                    <button class="Addbtn" onclick="addtocart()">ADD</button>
+                    <button class="Addbtn">ADD</button>
                     <div class="qty-box">
-                       <button onclick="decreaseqty">-</button>
+                       <button onclick="decreaseqty()">-</button>
                        <span id="qty-1">1</span>
-                       <button onclick="increaseqty">+</button>
+                       <button onclick="increaseqty()">+</button>
                     </div>
                 </div>
             </div>`
+        const addBtn = card.querySelector(".Addbtn");
+        addBtn.addEventListener("click", () => addtocart(dish.id));
         const line = document.createElement("div");
         line.classList.add("bottom-line1");
         menuContainer.appendChild(line);
@@ -40,10 +48,8 @@ fetch('menu.json')
     });
 });
 
-//add to cart 
-// create an empty array for storing cart items
-let cart=[];
 
 function addtocart(id){
-    console.log(id);
+    const prod=menuItems.find((dish)=>dish.id==id)
+    console.log(prod);
 }

@@ -555,7 +555,7 @@ header {
 }
 .Addbtn {
   position: absolute;
-  bottom: 1px;
+  bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
   background: #fff;
@@ -594,7 +594,7 @@ header {
 }
 .wholecart {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   background-color: #eaeaea;
   padding: 30px;
@@ -605,12 +605,12 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin:auto;
+  margin:50px;
   font-family: poppins, sans-serif;
 }
 .right-cart {
-  width: 35%;
-  height:100%;
+  width: 400px;
+  height:600px;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -652,13 +652,15 @@ header {
 .cartbutton {
   display: flex;
   margin-top: 20px;
+  justify-content:space-around;
+  align-items: center;
+
 }
 .outline-btn,
 .filled-btn {
   width: 20%;
   padding: 15px;
   text-align: center;
-  margin:auto;
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
@@ -675,7 +677,8 @@ header {
   color: #000;
 }
 .cart-items {
-  width: 100%;
+  width: 400px;
+  height:20%;
 }
 
 .hotel {
@@ -697,6 +700,23 @@ header {
     font-size: 18px;
     font-weight: 500;
 }
+.total-items{
+  padding-top:80%;
+  padding-left:10px;
+}
+.item-total{
+ display:inline;
+}
+.item-amt{
+  padding-left:70%;
+}
+.total{
+  padding-left:10px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 
 /*Media queries for mobile devices*/
