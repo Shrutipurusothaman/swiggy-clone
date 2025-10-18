@@ -32,11 +32,6 @@ fetch('menu.json')
                 <img src="${dish.image}" alt="${dish.name}">
                 <div class="add-section">
                     <button class="Addbtn">ADD</button>
-                    <div class="qty-box">
-                       <button onclick="decreaseqty()">-</button>
-                       <span id="qty-1">1</span>
-                       <button onclick="increaseqty()">+</button>
-                    </div>
                 </div>
             </div>`
         const addBtn = card.querySelector(".Addbtn");
@@ -47,8 +42,6 @@ fetch('menu.json')
         menuContainer.appendChild(card);
     });
 });
-
-
 function addtocart(id){
     const prod=menuItems.find((dish)=>dish.id==id)
     console.log(prod);

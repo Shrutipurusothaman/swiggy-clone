@@ -555,7 +555,7 @@ header {
 }
 .Addbtn {
   position: absolute;
-  bottom: -1px;
+  bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
   background: #fff;
@@ -568,21 +568,15 @@ header {
   cursor: pointer;
 }
 
-/*Add button css can be added down
 
 
 
 
 
-  .................................................................................
+ 
 
 
 
-
-
-
-
-*/
 
 /*cartpage css*/
 
@@ -715,6 +709,27 @@ header {
   display:flex;
   justify-content: space-between;
   align-items: center;
+}
+.display-items{
+  display:flex;
+  justify-content: space-between;
+}
+.img-dishes{
+  width:20%;
+  height:10%;
+}
+.item-name{
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding:0px 20px 20px 0px;
+}
+.quantity{
+  padding-left:2%;
+}
+.quantity input{
+  width:40px;
+  height:20px;
 }
 
 
