@@ -53,8 +53,79 @@ function addtocart(id){
       });
       console.log(cart);
     }
+    rendercart();
+}
+function rendercart(){
+    const cartcontainer=document.querySelector(".cartitems");
+    cartcontainer.innerHTML=""; 
+    if(cart.length==0){
+        cartcontainer.innerHTML=`<p>Your cart is empty</p>`;
+        return;
+    }
+    cart.forEach((item=>{
+        const listitem=document.createElement("div");
+        listitem.classList.add("list-items");
+        listitem.innerHTML=`
+            <div class="item-img">
+                <img src="${item.image}" alt="${item.name}">
+            </div>
+            <div class="Name">
+                ${item.name}
+            </div>
+            <div class="totalprice">
+                ${item.price}
+            </div>
+            <div class="quantity">
+                <span class="minus" data-id="${item.id}">-</span>
+                <span>${item.numberofunits}</span>
+                <span class="plus" data-id="${item.id}">+</span>
+            </div>
+        `;
+        cartcontainer.appendChild(listitem);
+    }));
+    addandreduce();
+
+}
+function addandreduce(){
+    document.querySelectorAll(".plus").forEach(btn=>{
+          btn.addEventListener("click",(e)=>{
+            const id=Number(e.target.dataset.id);
+            changeQuantity("increase",id);
+          });
+    });
+    document.querySelectorAll(".minus").forEach(btn=>{
+          btn.addEventListener("click",(e)=>{
+            const id=Number(e.target.dataset.id);
+            changeQuantity("decrease",id);
+          });
+    });
+     document.querySelectorAll(".remove-item").forEach(btn => {
+           btn.addEventListener("click", (e) => {
+            const id = Number(e.target.dataset.id);
+            removeItem(id);
+       });
+    });
 }
 
+function changeQuantity(action,id){
+    cart=cart.map((item)=>{
+        let numberofunits=item.numberofunits;
+        if(item.id===id){
+            if(action==="increase"){
+                numberofunits++;
+            }else if(action=="decrease" && numberofunits>1){
+                numberofunits--;
+            }
+    }
+    return{...item,numberofunits};
+  });
+   rendercart();
+}
+
+function removeItem(id) {
+  cart = cart.filter((item) => item.id != id);
+  rendercart();
+}
 
 
 
