@@ -15,7 +15,7 @@ fetch('menu.json')
     data.items.forEach(dish => {
         const card=document.createElement("div");
         card.classList.add("Mainmenu")
-        card.innerHTML= `
+        card.innerHTML += `
             <div class="menudetails">
                 <i class="fa-regular fa-square-caret-up" style="color: #b71010;"></i>
                 <h3>${dish.name}</h3>
@@ -43,6 +43,39 @@ fetch('menu.json')
     });
 });
 function addtocart(id){
-    const prod=menuItems.find((dish)=>dish.id==id)
-    console.log(prod);
+    if(cart.some((dish)=>dish.id==id)){
+        alert("product already exist")
+    }else{
+      const prod=menuItems.find((dish)=>dish.id==id)
+      cart.push({
+        ...prod,
+        numberofunits: 1,
+      });
+      console.log(cart);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+//cartdisplay
+const cartIcon = document.querySelector(".list6");
+const cart1 = document.querySelector(".shopping-cart");
+const closeBtn = document.querySelector(".close-btn");
+
+// toggle cart open/close when clicking the icon
+cartIcon.addEventListener("click", () => {
+  cart1.classList.toggle("showcart");
+});
+
+// also close when clicking the "Close" button
+closeBtn.addEventListener("click", () => {
+  cart1.classList.remove("showcart");
+});
