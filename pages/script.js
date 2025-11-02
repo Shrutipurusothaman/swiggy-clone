@@ -57,12 +57,17 @@ function addtocart(id){
 }
 function rendercart(){
     const cartcontainer=document.querySelector(".cartitems");
+    const totalAmountEl = document.querySelector(".total-amount");
     cartcontainer.innerHTML=""; 
     if(cart.length==0){
         cartcontainer.innerHTML=`<p>Your cart is empty</p>`;
+        if (totalAmountEl) totalAmountEl.textContent = "Rs. 0"; 
         return;
     }
+    let total=0;
     cart.forEach((item=>{
+        const itemTotal = item.price * item.numberofunits; 
+        total += itemTotal;
         const listitem=document.createElement("div");
         listitem.classList.add("list-items");
         listitem.innerHTML=`
@@ -73,7 +78,7 @@ function rendercart(){
                 ${item.name}
             </div>
             <div class="totalprice">
-                ${item.price}
+               Rs.${itemTotal}
             </div>
             <div class="quantity">
                 <span class="minus" data-id="${item.id}">-</span>
@@ -83,8 +88,10 @@ function rendercart(){
         `;
         cartcontainer.appendChild(listitem);
     }));
+    if (totalAmountEl) {
+    totalAmountEl.textContent = `Rs. ${total}`;
+  }
     addandreduce();
-
 }
 function addandreduce(){
     document.querySelectorAll(".plus").forEach(btn=>{
@@ -115,10 +122,13 @@ function changeQuantity(action,id){
                 numberofunits++;
             }else if(action=="decrease" && numberofunits>1){
                 numberofunits--;
+            }else if(action=="decrease" && numberofunits===1){
+                numberofunits=0;
             }
     }
     return{...item,numberofunits};
-  });
+  })
+   .filter((item) => item.numberofunits > 0);
    rendercart();
 }
 
@@ -127,26 +137,13 @@ function removeItem(id) {
   rendercart();
 }
 
-
-
-
-
-
-
-
-
-
 //cartdisplay
 const cartIcon = document.querySelector(".list6");
 const cart1 = document.querySelector(".shopping-cart");
 const closeBtn = document.querySelector(".close-btn");
-
-// toggle cart open/close when clicking the icon
 cartIcon.addEventListener("click", () => {
   cart1.classList.toggle("showcart");
 });
-
-// also close when clicking the "Close" button
 closeBtn.addEventListener("click", () => {
   cart1.classList.remove("showcart");
 });

@@ -641,6 +641,10 @@ body.showcart .shopping-cart{
 .cartitems::-webkit-scrollbar{
   width:0;
 }
+.cart-footer{
+  margin-left:2%;
+  padding:20px;
+}
 
 
 
@@ -663,7 +667,7 @@ body.showcart .shopping-cart{
     display: none;
   }
 
-  .navbar-right .items .list5 {
+  .navbar-right .items .list6 {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -730,20 +734,23 @@ body.showcart .shopping-cart{
     overflow-x: auto;
     padding:2% 0% 0% 4%;  
     gap:10px;
-    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
-    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
    }
   .bar-items .btn{
     margin:auto;
-    padding:6px 12px;
-    font-size: 12px;
+    font-size: 10px;
+    overflow: hidden;
   }
   .container-grid{
-    grid-template-columns: repeat(2, 1fr);
-    margin:0 0px;
+    grid-template-columns: repeat(2,1fr);
+    margin-left:10%;
   }
   .restaurant-card{
     width:calc(50%-10px);
+  }
+  .card-image{
+    aspect-ratio: 4/4;
   }
   /*swiggy best places to eat section*/
   .placestoeat{
@@ -800,7 +807,6 @@ body.showcart .shopping-cart{
     margin-left:0;
   }
   .bottom-line1{
-    width:80%;
-    
+    width:80%; 
   }
 }
