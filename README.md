@@ -1,4 +1,4 @@
-# Swiggy-clone <img width="22" height="22" alt="image" src="https://github.com/user-attachments/assets/3eaa9db3-3eee-4836-a007-c0f2c9e52d43" />
+# Swiggy-clone <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/3eaa9db3-3eee-4836-a007-c0f2c9e52d43" />
 
 ## Tech Stack:  
 + HTML  
@@ -17,4 +17,5 @@ Javascript:
 + JavaScript is a scripting language used to create and control dynamic website content.
   
 + Swiggy Website Link:
-[swiggy-clone-website](https://swiggy-website-clone-001.netlify.app/)
+[swiggy-clone-website]  
+(https://swiggy-website-clone-001.netlify.app/)
