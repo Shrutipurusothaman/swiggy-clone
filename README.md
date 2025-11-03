@@ -1,4 +1,4 @@
-# [Swiggy-clone](<img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/3eaa9db3-3eee-4836-a007-c0f2c9e52d43" />)
+# [Swiggy-clone]<img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/3eaa9db3-3eee-4836-a007-c0f2c9e52d43" />
 
 ## Tech Stack:  
 + HTML  
@@ -9,7 +9,7 @@
 
 HTML:
 + HTML or HyperText Markup Language, is the standard language for creating and structuring web pages.
-+ 
+  
 CSS:
 + CSS, which stands for Cascading Style Sheets, is a style sheet language used in web development to control the presentation and formatting of HTML documents.
   
