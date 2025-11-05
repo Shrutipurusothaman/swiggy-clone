@@ -222,7 +222,7 @@ header {
 .container-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 14%;
+  column-gap: 6%;
 }
 .blurimage{
   filter:grayscale(100%);
@@ -689,7 +689,7 @@ body.showcart .shopping-cart{
    height:auto;
  }
  .restaurant-card{
-   flex:1 1 20%;
+   flex:1 1 100%;
  }
 
  /*Restaurants with online food delivery in chindwara*/
@@ -717,7 +717,7 @@ body.showcart .shopping-cart{
   }
   .container-grid{
     grid-template-columns:repeat(2,12rem);
-    margin: auto;
+    margin:0% 0% 0% 10%;
   }
   .container2 .restaurant-card{
     height:auto;
