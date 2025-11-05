@@ -38,8 +38,8 @@ fetch('menu.json')
         addBtn.addEventListener("click", () => addtocart(dish.id));
         const line = document.createElement("div");
         line.classList.add("bottom-line1");
-        menuContainer.appendChild(line);
         menuContainer.appendChild(card);
+        menuContainer.appendChild(line);
     });
 });
 function addtocart(id){
