@@ -724,8 +724,12 @@ body.showcart .shopping-cart{
     width:calc(50%-10px);
   }
   .card-image{
-    height:12rem;
-    width:16rem;
+    height:auto;
+
+  }
+  .card-image img{
+    aspect-ratio: 3/4;
+    object-fit:cover;
   }
   /*swiggy best places to eat section*/
   .placestoeat{
