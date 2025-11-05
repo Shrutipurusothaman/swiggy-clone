@@ -666,7 +666,7 @@ body.showcart .shopping-cart{
     padding-left: 4%;          
     margin:0 40px;             
     justify-content:flex-start;
-    overflow-x: scroll;
+    overflow:scroll;
   }
   .top-items img {
     width: 100%;     
@@ -712,11 +712,12 @@ body.showcart .shopping-cart{
     margin:auto 2%;
   }
   .container-grid{
-    grid-template-columns: repeat(2,2fr);
+    grid-template-columns: repeat(2,auto);
   }
   .restaurant-card{
     height:auto;
-    max-width:80%;
+    max-width:60%;
+    margin:10% auto;
   }
   .card-image{
     height:10rem;
