@@ -223,6 +223,7 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 6%;
+  margin:auto 10%;
 }
 .blurimage{
   filter:grayscale(100%);
@@ -780,6 +781,9 @@ body.showcart .shopping-cart{
   }
   .bottom-line1{
     width:80%; 
+  }
+  .shopping-cart{
+    width:fit-content;
   }
 }
 
