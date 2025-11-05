@@ -222,7 +222,7 @@ header {
 .container-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 10%;
+  column-gap: 14%;
 }
 .blurimage{
   filter:grayscale(100%);
