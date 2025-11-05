@@ -689,7 +689,7 @@ body.showcart .shopping-cart{
    height:auto;
  }
  .restaurant-card{
-   flex:1 1 50%;
+   flex:1 1 20%;
  }
 
  /*Restaurants with online food delivery in chindwara*/
@@ -716,12 +716,13 @@ body.showcart .shopping-cart{
     display:grid;
   }
   .container-grid{
-    grid-template-columns:repeat(2,1fr);
-    margin: auto 8%;
+    grid-template-columns:repeat(2,12rem);
+    margin: auto;
   }
   .container2 .restaurant-card{
     height:auto;
-    width: 12rem;
+    width: 10rem;
+    object-fit: fill;
   }
   /*swiggy best places to eat section*/
   .placestoeat{
