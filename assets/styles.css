@@ -221,8 +221,7 @@ header {
 } 
 .container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;         
+  grid-template-columns: repeat(4, 1fr);         
 }
 .blurimage{
   filter:grayscale(100%);
@@ -658,26 +657,20 @@ body.showcart .shopping-cart{
     text-align:justify;
   }
   .buttons{
-    gap:5px;
-    margin:0;
-    padding:0;
-    padding-right:4%;
-    padding-left:32%;
+    display: none;
   }
   .top-items{
-    display: flex;            
+    display: flex;           
     gap: 8px;                  
     padding: 10px;            
     padding-left: 4%;          
     margin:0 40px;             
     justify-content:flex-start;
-    overflow: hidden;
-    scroll-behavior: smooth;
+    overflow-x: scroll;
   }
   .top-items img {
     width: 100%;     
     max-width: 120px;
-    width: calc(20% - 10px);
     height: auto;     
  }
  .top-items:hover{
@@ -692,6 +685,7 @@ body.showcart .shopping-cart{
  .container-flex{
    display:flex;
    overflow: scroll;
+   height:auto;
  }
 
  /*Restaurants with online food delivery in chindwara*/
@@ -718,17 +712,16 @@ body.showcart .shopping-cart{
     margin:auto 2%;
   }
   .container-grid{
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2,2fr);
   }
   .restaurant-card{
-    width:calc(50%-10px);
+    height:auto;
+    max-width:80%;
   }
   .card-image{
-    height:auto;
-
+    height:10rem;
   }
   .card-image img{
-    aspect-ratio: 3/4;
     object-fit:cover;
   }
   /*swiggy best places to eat section*/
