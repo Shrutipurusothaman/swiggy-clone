@@ -126,9 +126,9 @@ header {
   font-size: 20px;
   font-family: poppins ,sans-serif;
 }
-.container, .container2 {
+.container{
   max-width: 1200px;
-  margin:0rem 10rem 0rem 10rem;
+  margin:auto;
 }
 .container-flex {
   display: flex;
@@ -221,8 +221,12 @@ header {
 } 
 .container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);         
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  row-gap: 20px; 
 }
+      
+
 .blurimage{
   filter:grayscale(100%);
 } 
@@ -687,6 +691,9 @@ body.showcart .shopping-cart{
    overflow: scroll;
    height:auto;
  }
+ .restaurant-card{
+   flex:1 1 50%;
+ }
 
  /*Restaurants with online food delivery in chindwara*/
    .container1 h3{
@@ -709,18 +716,11 @@ body.showcart .shopping-cart{
     overflow: hidden;
   }
   .container2{
-    margin:auto 2%;
+    display:grid;
   }
   .container-grid{
-    grid-template-columns: repeat(2,auto);
-  }
-  .restaurant-card{
-    height:auto;
-    max-width:60%;
-    margin:10% auto;
-  }
-  .card-image{
-    height:10rem;
+     grid-template-columns: auto auto;
+     justify-content: space-evenly; 
   }
   .card-image img{
     object-fit:cover;
