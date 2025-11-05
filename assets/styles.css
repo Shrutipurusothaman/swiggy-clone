@@ -222,11 +222,8 @@ header {
 .container-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 16px;
-  row-gap: 20px; 
+  column-gap: 10%;
 }
-      
-
 .blurimage{
   filter:grayscale(100%);
 } 
@@ -719,11 +716,12 @@ body.showcart .shopping-cart{
     display:grid;
   }
   .container-grid{
-     grid-template-columns: auto auto;
-     justify-content: space-evenly; 
+    grid-template-columns:repeat(2,1fr);
+    margin: auto 8%;
   }
-  .card-image img{
-    object-fit:cover;
+  .container2 .restaurant-card{
+    height:auto;
+    width: 12rem;
   }
   /*swiggy best places to eat section*/
   .placestoeat{
