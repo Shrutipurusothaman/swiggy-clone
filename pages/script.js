@@ -61,8 +61,10 @@ function rendercart(){
     cartcontainer.innerHTML=""; 
     if(cart.length==0){
         cartcontainer.innerHTML=`<p>Your cart is empty</p>`;
-        if (totalAmountEl) totalAmountEl.textContent = "Rs. 0"; 
+        if (totalAmountEl) totalAmountEl.textContent = "Rs. 0";
+        Updatecartcount(); 
         return;
+        
     }
     let total=0;
     cart.forEach((item=>{
@@ -92,6 +94,7 @@ function rendercart(){
     totalAmountEl.textContent = `Rs. ${total}`;
   }
     addandreduce();
+    Updatecartcount();
 }
 function addandreduce(){
     document.querySelectorAll(".plus").forEach(btn=>{
@@ -137,8 +140,17 @@ function removeItem(id) {
   rendercart();
 }
 
+function Updatecartcount(){
+    const cartcount=document.querySelector(".cart-count");
+    let totalcount=0;
+     cart.forEach(item => totalcount += item.numberofunits);
+       if (cartcount) {
+        cartcount.textContent = totalcount;
+  }
+}
+
 //cartdisplay
-const cartIcon = document.querySelector(".list6");
+const cartIcon = document.querySelector(".list-6");
 const cart1 = document.querySelector(".shopping-cart");
 const closeBtn = document.querySelector(".close-btn");
 cartIcon.addEventListener("click", () => {
@@ -147,3 +159,12 @@ cartIcon.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   cart1.classList.remove("showcart");
 });
+ 
+const checkout=document.querySelector(".checkout-btn");
+checkout.addEventListener("click",()=> {
+    if(cart.length>0){
+        alert("Your Items will arrive do complete the payment process");
+    }else{
+        alert("Add items to cart for payment processing");
+    }
+})

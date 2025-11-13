@@ -543,6 +543,20 @@ header {
   border-radius: 8px;
   cursor: pointer;
 }
+.list-6{
+  margin-bottom:26px;
+  cursor:pointer;
+}
+.cart-count{
+  margin-top:2%;
+  color:black;
+  background-color: red;
+  border:2px solid black;
+  border-radius: 80%;
+  padding:0px 8px;
+  width:10px;
+}
+
 
 /*cart css*/
 .shopping-cart{
@@ -623,9 +637,6 @@ body.showcart .shopping-cart{
 }
 
 
-
-
-
 /*Media queries for mobile devices*/
 
 @media screen and (max-width: 576px) 
@@ -690,7 +701,7 @@ body.showcart .shopping-cart{
    height:auto;
  }
  .restaurant-card{
-   flex:1 1 100%;
+   flex:1  100%;
  }
 
  /*Restaurants with online food delivery in chindwara*/
@@ -762,6 +773,15 @@ body.showcart .shopping-cart{
     text-align:left;
     padding-left:10%;
   }
+  .navbar-right .items .list-6{
+    display:flex;
+    position: relative;
+  }
+  .cart-count{
+    margin-top:20%;
+    margin-right: 80%;
+    position: absolute;
+  }
   .adilhotel{
     width:72%;
     padding:20px 10px;
@@ -783,8 +803,14 @@ body.showcart .shopping-cart{
     width:80%; 
   }
   .shopping-cart{
-    width:fit-content;
+     
   }
 }
+
+
+
+
+
+
 
 
