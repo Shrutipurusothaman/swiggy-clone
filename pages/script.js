@@ -160,11 +160,18 @@ closeBtn.addEventListener("click", () => {
   cart1.classList.remove("showcart");
 });
  
-const checkout=document.querySelector(".checkout-btn");
-checkout.addEventListener("click",()=> {
-    if(cart.length>0){
-        alert("Your Items will arrive do complete the payment process");
-    }else{
-        alert("Add items to cart for payment processing");
+const checkout = document.querySelector(".checkout-btn");
+checkout.addEventListener("click", () => {
+    if (cart.length === 0) {
+        showMessage("Add items to cart for payment processing");
+        return;
     }
-})
+    let finalAmount = 0;
+    cart.forEach(item => finalAmount += item.total);
+    localStorage.setItem("orderTotal", finalAmount);
+    showMessage("Items added to cart… redirecting to payment process…");
+    setTimeout(() => {
+        window.location.href = "payment.html";
+    }, 2000);
+});
+
