@@ -638,16 +638,18 @@ header {
 
 /*cart css*/
 .shopping-cart {
-  width: 400px;
+   width: 400px;
   background-color: #7e7a7a;
   color: white;
   position: fixed;
-  inset: 0 -400px 0 auto;
-  display: grid;
-  grid-template-rows: 70px 1fr 70px;
-  transform: translateX(100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%); 
   transition: transform 0.4s ease;
   z-index: 1000;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
 }
 
 .shopping-cart.showcart {
@@ -665,11 +667,6 @@ header {
 .shopping-cart .cartbtn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-
-body.showcart .shopping-cart {
-  inset: 0 0 0 auto;
-
 }
 
 .cartbtn button {
@@ -767,6 +764,10 @@ body.showcart .shopping-cart {
 @media screen and (max-width: 576px) {
 
   /* Header section */
+  html, body {
+  overflow-x: hidden;
+  }
+
   .navbar {
     justify-content: space-between;
   }
@@ -957,12 +958,12 @@ body.showcart .shopping-cart {
     width: 80%;
   }
 
-  .shopping-cart {
-    width: 40rem;
-    inset: 0 -100% 0 auto;
-    grid-template-rows: 60px 1fr 60px;
-    padding: 10px;
-  }
+   .shopping-cart {
+    width: 100%;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+ }
 
   .shopping-cart h2 {
     font-size: 18px;
@@ -999,4 +1000,26 @@ body.showcart .shopping-cart {
     font-size: 16px;
     padding: 10px;
   }
+  
+  .shopping-cart.showcart {
+    transform: translateX(0);   
+  }
+  
+  /*payment page*/
+.payment-heading h1 {
+    font-size: 2rem;    
+    margin-left: 0;  
+  }
+  .payment-box {
+    width: 90%;         
+    padding: 4.5rem 1.5rem;
+  }
+
+  .payment-box h3 {
+    position: static;   
+    font-size: 1.5rem; 
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom:6%;
+ }
 }
