@@ -31,17 +31,23 @@ fetch('menu.json')
             <div class="dishimage">
                 <img src="${dish.image}" alt="${dish.name}">
                 <div class="add-section">
-                    <button class="Addbtn">ADD</button>
+                    <button class="Addbtn" data-id="${dish.id}">ADD</button>
                 </div>
             </div>`
         const addBtn = card.querySelector(".Addbtn");
-        addBtn.addEventListener("click", () => addtocart(dish.id));
+        addBtn.addEventListener("click", () => {
+            addtocart(dish.id)
+            addBtn.textContent="ADDED";
+            addBtn.style.backgroundColor="#63E6BE";
+            addBtn.style.color="white";
+        });
         const line = document.createElement("div");
         line.classList.add("bottom-line1");
         menuContainer.appendChild(card);
         menuContainer.appendChild(line);
     });
 });
+
 function addtocart(id){
     if(cart.some((dish)=>dish.id==id)){
         alert("product already exist")
@@ -117,27 +123,37 @@ function addandreduce(){
     });
 }
 
-function changeQuantity(action,id){
-    cart=cart.map((item)=>{
-        let numberofunits=item.numberofunits;
-        if(item.id===id){
-            if(action==="increase"){
-                numberofunits++;
-            }else if(action=="decrease" && numberofunits>1){
-                numberofunits--;
-            }else if(action=="decrease" && numberofunits===1){
-                numberofunits=0;
+function changeQuantity(action, id) {
+    let itemStillExists = true;
+    cart = cart.map(item => {
+        let units = item.numberofunits;
+        if (item.id === id) {
+            if (action === "increase") {
+                units++;
+            } 
+            else if (action === "decrease" && units > 1) {
+                units--;
+            } 
+            else if (action === "decrease" && units === 1) {
+                units = 0;
+                itemStillExists = false;  
             }
+            }
+            return { ...item, numberofunits: units };
+        })
+        .filter(item => item.numberofunits > 0);
+    rendercart();
+    if (!itemStillExists) {
+        resetAddButton(id);
     }
-    return{...item,numberofunits};
-  })
-   .filter((item) => item.numberofunits > 0);
-   rendercart();
 }
+
+
 
 function removeItem(id) {
   cart = cart.filter((item) => item.id != id);
   rendercart();
+  resetAddButton(id);
 }
 
 function Updatecartcount(){
@@ -163,15 +179,30 @@ closeBtn.addEventListener("click", () => {
 const checkout = document.querySelector(".checkout-btn");
 checkout.addEventListener("click", () => {
     if (cart.length === 0) {
-        showMessage("Add items to cart for payment processing");
+        alert("Add items to cart for payment processing");
         return;
     }
     let finalAmount = 0;
-    cart.forEach(item => finalAmount += item.total);
+    cart.forEach(item => {
+        finalAmount += item.price * item.numberofunits;
+    });
     localStorage.setItem("orderTotal", finalAmount);
-    showMessage("Items added to cart… redirecting to payment process…");
+    alert("Items added to cart… redirecting to payment process…");
     setTimeout(() => {
         window.location.href = "payment.html";
     }, 2000);
 });
+
+//from "ADDED" to "ADD"
+function resetAddButton(id) {
+    const btn = document.querySelector(`.Addbtn[data-id="${id}"]`);
+    if (btn) {
+        btn.textContent = "ADD";
+        btn.style.backgroundColor = "";
+        btn.style.color = "";
+    }
+}
+
+
+
 
