@@ -801,8 +801,7 @@ header {
     gap: 8px;
     padding: 10px;
     padding-left: 4%;
-    margin: 0 40px;
-    justify-content: flex-start;
+    margin: 0 auto;
     overflow: scroll;
   }
 
@@ -817,28 +816,24 @@ header {
   }
 
   /* Top Restaurant chains in chindwara*/
-  .container {
-    transform: scale(0.9);
-  }
-
-  .container-flex {
-    display: flex;
-    overflow: scroll;
-    height: auto;
-  }
-
-  .container-flex .dish{
-    display:none;
-  }
-
-  .container-flex .rating-timing{
-    padding:2%;
-  }
-
-  .restaurant-card {
-    flex: 1 ;
-  }
-
+   .container{
+    display:flex;
+   }
+   .containernew{
+    display:flex;
+    margin:0 auto;
+    gap:2%;
+    justify-content: space-between;
+   }
+   .containernew .dish,.location{
+     display:none;
+   }
+   .container .break-sm{
+    display: block;
+   }
+    .containernew svg{
+      display: none;
+    }
   /*Restaurants with online food delivery in chindwara*/
   .container1 h3 {
     font-size: 18px;
@@ -1009,10 +1004,11 @@ header {
   }
   
   /*payment page*/
-.payment-heading h1 {
+ .payment-heading h1 {
     font-size: 2rem;    
     margin-left: 0;  
   }
+
   .payment-box {
     width: 90%;         
     padding: 4.5rem 1.5rem;
