@@ -90,7 +90,7 @@ header {
 .heading {
   display: flex;
   position: relative;
-  margin: 2% 0% 0% 10%;
+  margin:0 8rem;
   font-family: poppins, sans-serif;
   padding: 10px;
 }
@@ -296,9 +296,8 @@ header {
 
 .container-grid {
   display: grid;
-  grid-template-columns: repeat(4,20rem);
+  grid-template-columns: repeat(4,auto);
   margin:0 10rem;
-
 }
 
 .blurimage {
@@ -890,8 +889,8 @@ header {
   }
 
   .container-grid {
-    grid-template-columns: repeat(2,auto);
-    margin:auto 4rem;
+    grid-template-columns: repeat(2,14rem);
+    margin:auto 2rem;
     gap:1rem;
   }
 
