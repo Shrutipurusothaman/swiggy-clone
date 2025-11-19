@@ -154,6 +154,27 @@ header {
   margin: 0% 0% 0% 10%;
   font-size: 20px;
   font-family: poppins, sans-serif;
+  position: relative;
+}
+.button1{
+  display: flex;
+  position:absolute;
+  top: 23rem;
+  right:10rem;
+  gap: 10px;
+}
+
+#before{
+  border: 14px solid #aaa;
+  background-color: #aaa;
+  border-radius: 22px;
+  cursor: pointer;
+}
+#after{
+   border: 14px solid #aaa;
+  background-color: #aaa;
+  border-radius: 22px;
+  cursor: pointer;
 }
 
 .container {
@@ -846,6 +867,11 @@ header {
     gap:2%;
     justify-content: space-between;
     overflow: hidden;
+   }
+   .button1{
+    margin:0 auto;
+    right:1rem;
+    top:22rem;
    }
 
   

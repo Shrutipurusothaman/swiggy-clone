@@ -121,14 +121,14 @@
       <div class="bottom-line"></div>
       <div class="main-container">
          <h3>Top restaurant chains in Chhindwara</h3>
+         <div class="button1">
+         <button id="before" onclick="before()">
+            <i class="fa-sharp fa-solid fa-arrow-left" style="color: #000000;"></i>
+         </button>
+         <button id="after" onclick="after()">
+           <i class="fa-sharp fa-solid fa-arrow-right" style="color: #000000;"></i>
+         </button>
       </div>
-      <div class="buttons">
-         <button id="before">
-            
-         </button>
-         <button id="after">
-
-         </button>
       </div>
       <div class="container">
          <div class="containernew">
@@ -986,12 +986,20 @@
    </footer>
    <script>
       const container = document.querySelector('.top-items');
+      const button=document.querySelector('.containernew');
+      const scroll=128;
       const scrollAmount = 150;
       function prev() {
          container.scrollLeft -= scrollAmount;
       }
       function next() {
          container.scrollLeft += scrollAmount;
+      }
+      function before(){
+          button.scrollLeft -= scroll;
+      }
+      function after(){
+         button.scrollLeft += scroll;
       }
    </script>
 </body>
