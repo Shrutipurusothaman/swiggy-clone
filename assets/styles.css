@@ -89,6 +89,7 @@ header {
 
 .heading {
   display: flex;
+  position: relative;
   margin: 2% 0% 0% 10%;
   font-family: poppins, sans-serif;
   padding: 10px;
@@ -96,7 +97,9 @@ header {
 
 .buttons {
   display: flex;
-  padding: 0 0 0 56rem;
+  position: absolute;
+  right:8rem;
+  top:6.5rem;
   gap: 10px;
 }
 
@@ -155,19 +158,21 @@ header {
 
 .container {
   display:flex;     
+  white-space: nowrap;
 }
 .containernew{
   display:flex;
-  max-width:80%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  max-width:100%;
   margin:0 10rem;
   justify-content: space-between;
-  flex:1;
+  gap:2rem;
 }
 
 .restaurant-card {
-  display: block;
-  width: 250px;
-  overflow: hidden;
+  width: 16rem;
+  flex:0 0 auto;
   border-radius: 16px;
   background: white;
   font-family: Arial, sans-serif;
@@ -243,7 +248,7 @@ header {
 .container1 h3 {
   font-size: 20px;
   font-family: poppins, sans-serif;
-  padding:1.5rem 10rem;
+  margin:2rem 10rem;
 }
 
 .bar-items {
@@ -265,12 +270,13 @@ header {
 }
 
 .container2{
-  margin:0 10rem;
+  margin:0 auto;
 }
 
 .container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4,20rem);
+  margin:0 10rem;
 
 }
 
@@ -795,13 +801,14 @@ header {
   }
 
   /* What's on your mind*/
-  .heading h3 {
-    font-size: 18px;
-    text-align: justify;
+ 
+  .heading{
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
   }
-
-  .buttons {
-    display: none;
+  .heading h3 {
+    white-space: nowrap;
   }
 
   .top-items {
@@ -809,14 +816,19 @@ header {
     gap: 8px;
     padding: 10px;
     padding-left: 4%;
-    margin: 0 auto;
-    overflow: scroll;
+    margin:0 2rem;
   }
 
   .top-items img {
-    width: 100%;
+    width:20%;
     max-width: 120px;
-    height: auto;
+    height: auto; 
+  }
+  
+  .buttons{
+    margin:0 auto;
+    right:20px;
+    top:6rem;
   }
 
   .top-items:hover {
@@ -826,30 +838,21 @@ header {
   /* Top Restaurant chains in chindwara*/
    .container{
     display:flex;
+    white-space: nowrap;
    }
    .containernew{
     display:flex;
-    margin:0 auto;
+    margin:0 4rem;
     gap:2%;
     justify-content: space-between;
-   }
-   .containernew .dish,.location{
-     display:none;
-   }
-   .break-sm,.time{
-    display: block;
-   }
-   .dot{
-    display: none;
-   }
-   .rating-timing svg{
-    top:-2%;
+    overflow: hidden;
    }
 
+  
   /*Restaurants with online food delivery in chindwara*/
   .container1 h3 {
     font-size: 18px;
-    margin:0 auto;
+    margin:auto 2rem;
   }
 
   .bar-items {
@@ -862,6 +865,8 @@ header {
 
   .container-grid {
     grid-template-columns: repeat(2,auto);
+    margin:auto 4rem;
+    gap:1rem;
   }
 
   .container2 .restaurant-card {
@@ -872,9 +877,9 @@ header {
 
   /*swiggy best places to eat section*/
   .placestoeat {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(1,4fr);
     gap: 20px;
-    margin: 0% 0% 0% 4%;
+    padding:2rem;
   }
 
   .placeheading {
