@@ -885,19 +885,18 @@ header {
   }
 
   .container2 {
-    display: grid;
+    display:inline-grid;
   }
 
   .container-grid {
-    grid-template-columns: repeat(2,14rem);
+    grid-template-columns:1fr 1fr;
     margin:auto 2rem;
-    gap:1rem;
-    aspect-ratio: 1/1;
+    padding:0 2rem;
+    row-gap:10rem;
   }
-
-  .container2 .restaurant-card {
-    height: auto;
-    width: 14rem;
+  .conatiner-grid,.restaurant-card,.card-image{
+    width:12rem;
+    height:8rem;
     object-fit: fill;
   }
 
