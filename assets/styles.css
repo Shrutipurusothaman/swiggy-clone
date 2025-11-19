@@ -890,7 +890,7 @@ header {
 
   .container-grid {
     grid-template-columns:1fr 1fr;
-    margin:auto 2rem;
+    margin:auto;
     padding:0 2rem;
     row-gap:10rem;
   }
@@ -898,7 +898,7 @@ header {
     width:12rem;
     height:8rem;
     object-fit: fill;
-  }
+  } 
 
   /*swiggy best places to eat section*/
   .placestoeat {
