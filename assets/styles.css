@@ -146,7 +146,7 @@ header {
   border-color: #eaeaea;
   margin: 25px auto;
 }
-
+/*Top restaurant chain in chhindwara*/
 .main-container h3 {
   margin: 0% 0% 0% 10%;
   font-size: 20px;
@@ -187,7 +187,6 @@ header {
   height: 160px;
   overflow: hidden;
   max-width: 1200px;
-  ;
 }
 
 .card-image img {
@@ -219,11 +218,20 @@ header {
 }
 
 .rating-timing {
+  display: flex;
+  align-items: center; 
+  gap: 6px;            
   font-size: 14px;
   color: #333;
-  margin: 2px 0;
 }
 
+.rating-timing svg {
+  width: 20px;
+  height: 20px;
+  padding: 0; 
+  margin: 0;
+  flex: 0 0 20px;  
+}
 .dish,
 .location {
   font-size: 14px;
@@ -828,33 +836,24 @@ header {
    .containernew .dish,.location{
      display:none;
    }
-   .container .break-sm{
+   .break-sm,.time{
     display: block;
    }
-    .containernew svg{
-      display: none;
-    }
+   .dot{
+    display: none;
+   }
+   .rating-timing svg{
+    top:-2%;
+   }
+
   /*Restaurants with online food delivery in chindwara*/
   .container1 h3 {
     font-size: 18px;
-    margin: 6% 0% 0% 8%;
+    margin:0 auto;
   }
 
   .bar-items {
     display: none;
-    flex-wrap: nowrap;
-    justify-content: left;
-    overflow-x: auto;
-    padding: 2% 0% 0% 4%;
-    gap: 10px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .bar-items .btn {
-    margin: auto;
-    font-size: 10px;
-    overflow: hidden;
   }
 
   .container2 {
@@ -862,8 +861,7 @@ header {
   }
 
   .container-grid {
-    grid-template-columns: repeat(2, 14rem);
-    margin: 0% 0% 0% 10%;
+    grid-template-columns: repeat(2,auto);
   }
 
   .container2 .restaurant-card {
