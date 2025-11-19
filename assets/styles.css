@@ -852,8 +852,8 @@ header {
   /* Top Restaurant chains in chindwara*/
   
    .main-container h3{
-      margin:0 2rem;
-      white-space:nowrap;
+      margin:0 2.5rem;
+      font-size:18px;
    }
    .container{
     display:flex;
