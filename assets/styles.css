@@ -295,6 +295,24 @@ header {
   font-weight: 10px;
 }
 
+.placeheading h3{
+  margin:4rem 0rem 0rem;
+}
+
+.placeheading1 {
+  margin:2rem 8rem;
+  font-family: poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 10px;
+}
+
+.placeheading2 {
+  margin:2rem 8rem;
+  font-family: poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 10px;
+}
+
 .placestoeat {
   display:grid;
   grid-template-columns: repeat(4, 1fr);
@@ -872,13 +890,15 @@ header {
 
   .container2 {
     display:inline-grid;
+    gap:6rem;
   }
 
   .container-grid {
-    grid-template-columns:repeat(2,1fr);
-    margin:auto;
-    padding:0rem 0rem 4rem 0rem;
-    gap:4rem;
+    grid-template-columns:repeat(2,auto);
+    margin:0 1rem;
+    padding:0 1rem;
+    column-gap: 2rem;
+    row-gap: 6rem;
   }
   .conatiner-grid,.restaurant-card,.card-image{
     width:12rem;
@@ -888,18 +908,27 @@ header {
 
   /*swiggy best places to eat section*/
   .placestoeat{
-    grid-template-columns: repeat(1,4fr);
+    grid-template-columns: repeat(1,2fr);
     gap: 20px;
-    padding:2rem;
-  }
-
-  .placestoeat h3{
-    padding:2rem 0;
+    padding:1rem;
   }
 
   .placeheading {
     font-size: 18px;
+    margin: 6% 0% 0% 4%;
+    padding: 20px;
+  }
+
+  .placeheading1 {
+    font-size: 18px;
     margin: 4% 0% 0% 4%;
+    padding: 20px;
+  }
+
+  .placeheading2 {
+    font-size: 18px;
+    margin: 4% 0% 0% 4%;
+    padding: 20px;
   }
 
   /*swiggy footer*/
