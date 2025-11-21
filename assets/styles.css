@@ -895,7 +895,7 @@ header {
 
   .container-grid {
     grid-template-columns:repeat(2,auto);
-    margin:0 1rem;
+    margin:0;
     padding:0 1rem;
     column-gap: 2rem;
     row-gap: 6rem;
